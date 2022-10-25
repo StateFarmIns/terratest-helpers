@@ -421,10 +421,6 @@ func ValidateAccountPasswordPolicy(t *testing.T, svc *iam.IAM, verboseOutput boo
 		return
 	}
 
-	if verboseOutput {
-		fmt.Println(accountPasswordPolicyResult.String())
-	}
-
 	assert.Equal(t, true, *accountPasswordPolicyResult.PasswordPolicy.AllowUsersToChangePassword)
 	assert.Equal(t, true, *accountPasswordPolicyResult.PasswordPolicy.HardExpiry)
 	assert.Equal(t, int64(90), *accountPasswordPolicyResult.PasswordPolicy.MaxPasswordAge)
