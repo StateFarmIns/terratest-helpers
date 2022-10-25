@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/StateFarmIns/terratest-helpers-private.git"
+    "url": "git+https://github.com/StateFarmIns/terratest-helpers.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/StateFarmIns/terratest-helpers-private/issues"
+    "url": "https://github.com/StateFarmIns/terratest-helpers/issues"
   },
-  "homepage": "https://github.com/StateFarmIns/terratest-helpers-private#readme",
+  "homepage": "https://github.com/StateFarmIns/terratest-helpers#readme",
   "dependencies": {
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1"
