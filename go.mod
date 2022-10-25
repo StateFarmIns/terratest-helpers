@@ -1,4 +1,4 @@
-module tests
+module github.com/StateFarmIns/terratest-helpers
 
 go 1.19
 
