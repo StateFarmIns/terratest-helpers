@@ -29,5 +29,5 @@ func TestS3TerratestExample(t *testing.T) {
 	})
 	s3svc := s3.New(sess)
 
-	tests.ValidateBucketExample(t, s3svc, bucketName, true)
+	tests.ValidateBucketLocation(t, s3svc, bucketName, "us-east-1", true)
 }
