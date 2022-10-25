@@ -1,0 +1,24 @@
+{
+  "name": "terratest-helpers",
+  "version": "1.0.0",
+  "description": "[![Apache V2 License](https://img.shields.io/badge/license-Apache%20V2-blue.svg)](https://github.com/aws/aws-sdk-go/blob/main/LICENSE.txt)",
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StateFarmIns/terratest-helpers-private.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StateFarmIns/terratest-helpers-private/issues"
+  },
+  "homepage": "https://github.com/StateFarmIns/terratest-helpers-private#readme",
+  "dependencies": {
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1"
+  }
+}

@@ -1,0 +1,18 @@
+# Compiled files
+*.tfstate
+*.tfstate.*
+
+# Local .terraform directories
+**/.terraform/*
+**/*.log
+
+.idea/*
+
+# Demo directory
+#/demo/*
+
+dist/
+
+# Node
+node_modules/
+package-lock.json
