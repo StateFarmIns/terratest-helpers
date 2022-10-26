@@ -18,6 +18,7 @@ linters:
     - funlen
     - gomnd
     - cyclop
+    - gomoddirectives
   # enable:
   #   - gofmt
   #   - gosimple
