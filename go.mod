@@ -63,4 +63,5 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
+// Removing initial build version
 retract v0.0.0-20221025212958-ab2f36363e18
