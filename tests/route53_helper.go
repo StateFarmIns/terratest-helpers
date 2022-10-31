@@ -2,6 +2,7 @@ package tests
 
 import (
 	"fmt"
+	"strings"
 	"testing"
 
 	"github.com/aws/aws-sdk-go/aws"
@@ -11,8 +12,8 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// ValidateRoute53PrivateZone Validate the Hosted Zone was created
-func ValidateRoute53PrivateZone(t *testing.T, svc *route53.Route53, hostedZoneID string, hostedZoneName string, verboseOutput bool) {
+// ValidateRoute53HostedZone Validate the Hosted Zone was created
+func ValidateRoute53HostedZone(t *testing.T, svc *route53.Route53, hostedZoneID string, hostedZoneName string, privateZone bool, verboseOutput bool) {
 	t.Helper()
 
 	getHostedZoneInput := &route53.GetHostedZoneInput{
@@ -45,6 +46,8 @@ func ValidateRoute53PrivateZone(t *testing.T, svc *route53.Route53, hostedZoneID
 	}
 
 	assert.Equal(t, hostedZoneName, *getHostedZoneResult.HostedZone.Name)
+	assert.Equal(t, hostedZoneID, strings.Split(*getHostedZoneResult.HostedZone.Id, "/")[2])
+	assert.Equal(t, privateZone, *getHostedZoneResult.HostedZone.Config.PrivateZone)
 }
 
 // ValidateRoute53ResolverRuleAssociation Validate a rule association exists
