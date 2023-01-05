@@ -3,7 +3,7 @@ module github.com/StateFarmIns/terratest-helpers
 go 1.19
 
 require (
-	github.com/aws/aws-sdk-go v1.44.172
+	github.com/aws/aws-sdk-go v1.44.173
 	github.com/gruntwork-io/terratest v0.41.6
 	github.com/stretchr/testify v1.8.1
 )
