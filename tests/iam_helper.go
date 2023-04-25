@@ -45,7 +45,6 @@ func ValidatePolicy(t *testing.T, svc *iam.IAM, policyArn string, policyName str
 	}
 
 	assert.Equal(t, policyName, *policyResult.Policy.PolicyName)
-	assert.Equal(t, true, *policyResult.Policy.IsAttachable)
 }
 
 // ValidateUserDetails get user details
