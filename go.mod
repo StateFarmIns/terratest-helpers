@@ -5,7 +5,7 @@ go 1.19
 require (
 	github.com/aws/aws-sdk-go v1.44.271
 	github.com/gruntwork-io/terratest v0.41.19
-	github.com/stretchr/testify v1.8.2
+	github.com/stretchr/testify v1.8.3
 )
 
 require (
