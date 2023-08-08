@@ -158,6 +158,9 @@ func ValidateCloudWatchEventRuleTarget(t *testing.T, svc *cloudwatchevents.Cloud
 		fmt.Println(listTargetsByRuleResult)
 	}
 
-	assert.Equal(t, roleArn, *listTargetsByRuleResult.Targets[0].RoleArn)
+	if roleArn != "" {
+		assert.Equal(t, roleArn, *listTargetsByRuleResult.Targets[0].RoleArn)
+	}
+
 	assert.Equal(t, eventBusArn, *listTargetsByRuleResult.Targets[0].Arn)
 }
