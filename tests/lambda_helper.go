@@ -55,7 +55,7 @@ func ValidateLambdaFunctionExists(t *testing.T, svc *lambda.Lambda, functionName
 	}
 }
 
-func ValidateLambdaFunctionConfiguration(t *testing.T, svc *lambda.Lambda, functionName string, architecture string, handlerName string, layerNames []string, memorySize int64, packageType string, role string, runtime string, state string, timeout int64, vpcId string, subnets []string, securityGroups []string, verboseOutput bool) {
+func ValidateLambdaFunctionConfiguration(t *testing.T, svc *lambda.Lambda, functionName string, architecture string, handlerName string, layerNames []string, memorySize int64, packageType string, role string, runtime string, state string, timeout int64, vpcID string, subnets []string, securityGroups []string, verboseOutput bool) {
 	t.Helper()
 
 	getFunctionInput := &lambda.GetFunctionInput{
@@ -102,7 +102,7 @@ func ValidateLambdaFunctionConfiguration(t *testing.T, svc *lambda.Lambda, funct
 	assert.Equal(t, runtime, *getFunctionResult.Configuration.Runtime)
 	assert.Equal(t, state, *getFunctionResult.Configuration.State)
 	assert.Equal(t, *aws.Int64(timeout), *getFunctionResult.Configuration.Timeout)
-	assert.Equal(t, vpcId, *getFunctionResult.Configuration.VpcConfig.VpcId)
+	assert.Equal(t, vpcID, *getFunctionResult.Configuration.VpcConfig.VpcId)
 	// validate subnets
 	for i := 0; i < len(subnets); i++ {
 		assert.Contains(t, getFunctionResult.String(), subnets[i])
@@ -130,5 +130,4 @@ func ValidateLambdaFunctionConfiguration(t *testing.T, svc *lambda.Lambda, funct
 			}
 		}
 	}
-
 }
