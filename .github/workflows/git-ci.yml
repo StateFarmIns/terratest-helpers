@@ -2,10 +2,10 @@ name: Release
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
-    
+    branches: [main]
+
 jobs:
   setup:
     name: Setup
@@ -44,13 +44,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 18
+          node-version: 20
 
       - name: Install dependencies
         run: |
           npm install --package-lock
           npm ci
-        
+
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
