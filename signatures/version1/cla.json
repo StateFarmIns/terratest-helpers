@@ -1,3 +1,20 @@
 {
-   "signedContributors": []
+  "signedContributors": [
+    {
+      "name": "ryanwillett12",
+      "id": 18289114,
+      "comment_id": 2013725906,
+      "created_at": "2024-03-21T20:59:37Z",
+      "repoId": 557534917,
+      "pullRequestNo": 307
+    },
+    {
+      "name": "ryanwillett12",
+      "id": 18289114,
+      "comment_id": 2013740364,
+      "created_at": "2024-03-21T21:09:16Z",
+      "repoId": 557534917,
+      "pullRequestNo": 307
+    }
+  ]
 }
